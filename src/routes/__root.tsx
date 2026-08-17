@@ -29,18 +29,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Live Event Tally" },
       { name: "description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "Live Event Tally" },
       { property: "og:description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Live Event Tally" },
       { name: "twitter:description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e58c2581-baa1-4f60-863e-f8a0a59cb2f2/id-preview-d9fb7359--dc363fa5-ba67-4e18-9c7b-60575fb1d490.lovable.app-1777917537740.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e58c2581-baa1-4f60-863e-f8a0a59cb2f2/id-preview-d9fb7359--dc363fa5-ba67-4e18-9c7b-60575fb1d490.lovable.app-1777917537740.png" },
     ],
     links: [
       {
