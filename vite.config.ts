@@ -3,8 +3,9 @@ import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   resolve: {
     alias: {
       "@": `${process.cwd()}/src`,
@@ -34,6 +35,9 @@ export default defineConfig({
         },
       },
     }),
+    // Só entra no build de produção — em dev o TanStack Start já serve
+    // client+SSR sozinho, sem precisar do adapter de deploy.
+    ...(command === "build" ? [nitro({ preset: "vercel" })] : []),
     viteReact(),
   ],
-});
+}));

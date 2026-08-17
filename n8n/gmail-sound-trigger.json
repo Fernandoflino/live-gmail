@@ -11,7 +11,11 @@
           ]
         },
         "simple": true,
-        "filters": {}
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ]
+        }
       },
       "id": "b1e6f2a0-1a2b-4c3d-8e4f-000000000001",
       "name": "Gmail Trigger",
