@@ -1,0 +1,68 @@
+{
+  "name": "Gmail → Alerta de som (ntfy.sh)",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": true,
+        "filters": {}
+      },
+      "id": "b1e6f2a0-1a2b-4c3d-8e4f-000000000001",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        240,
+        300
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://ntfy.sh/gmail-alert-fernandolino-7x9k2m",
+        "sendBody": true,
+        "specifyBody": "raw",
+        "rawContentType": "text/plain",
+        "body": "=Novo email: {{ $json.subject ?? $json.Subject ?? $json.snippet ?? $json.Snippet ?? 'sem assunto' }}",
+        "options": {}
+      },
+      "id": "b1e6f2a0-1a2b-4c3d-8e4f-000000000002",
+      "name": "Publicar no ntfy.sh",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        460,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Publicar no ntfy.sh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

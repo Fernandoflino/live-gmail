@@ -29,14 +29,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Live Event Tally" },
-      { name: "description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
-      { property: "og:title", content: "Live Event Tally" },
-      { property: "og:description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
+      { title: "Alerta de email — Gmail" },
+      { name: "description", content: "Toca um som sempre que chega um email novo no Gmail (via n8n)." },
+      { property: "og:title", content: "Alerta de email — Gmail" },
+      { property: "og:description", content: "Toca um som sempre que chega um email novo no Gmail (via n8n)." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Live Event Tally" },
-      { name: "twitter:description", content: "Live Event Tally displays real-time event registration data from a public CSV in a 16:9 dashboard format." },
+      { name: "twitter:title", content: "Alerta de email — Gmail" },
+      { name: "twitter:description", content: "Toca um som sempre que chega um email novo no Gmail (via n8n)." },
     ],
     links: [
       {

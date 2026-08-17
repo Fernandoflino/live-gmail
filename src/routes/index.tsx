@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Dashboard } from "@/components/Dashboard";
+import { GmailAlert } from "@/components/GmailAlert";
 
 export const Route = createFileRoute("/")({
-  component: Dashboard,
+  component: GmailAlert,
   head: () => ({
     meta: [
-      { title: "Painel ao vivo — Inscrições do Evento" },
+      { title: "Alerta de email — Gmail" },
       {
         name: "description",
-        content: "Dashboard em tempo real com total de inscritos, ranking por instituição e novos inscritos da última hora.",
+        content: "Toca um som sempre que chega um email novo no Gmail (via n8n).",
       },
     ],
   }),

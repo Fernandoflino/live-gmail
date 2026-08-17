@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-// Mesma pasta de áudios usada no dashboard da planilha — Vite escaneia
-// em build time, então basta adicionar/remover arquivos em src/assets/audio.
+// Vite escaneia essa pasta em build time, então basta adicionar/remover
+// arquivos em src/assets/audio para mudar os sons disponíveis.
 const AUDIO_FILES = Object.values(
   import.meta.glob("@/assets/audio/*.{mp3,mpeg,wav,ogg,m4a,aac}", {
     eager: true,
